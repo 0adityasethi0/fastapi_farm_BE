@@ -83,3 +83,9 @@ INSERT INTO daily_farm_log (
     finally:
         if 'cursor' in locals(): cursor.close()
         if 'conn' in locals(): conn.close()
+
+
+@app.get("/")
+def root():
+    return {"status": "FastAPI is live!"}
+
