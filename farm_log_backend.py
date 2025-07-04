@@ -87,5 +87,10 @@ INSERT INTO daily_farm_log (
 
 @app.get("/")
 def root():
-    return {"status": "FastAPI is live!"}
+    return {"status": "FastAPI is live"}
+
+@app.get("/healthcheck")
+def healthcheck():
+    return {"status": "ok"}
+
 
